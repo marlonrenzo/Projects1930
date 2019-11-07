@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
-    </head>
-
-    <body>
-        <h1>Login / Sign Up</h1>
-        <div id="firebaseui-auth-container"></div>
-        <div id="loader">Loading...</div>
-
-
+        <title>Main</title>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
 
@@ -20,20 +12,29 @@
 
         <script>
         // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyC_fPZ0CSN6-KQxowz76A7jsOP4e_BYCso",
-            authDomain: "projectauthentication-fb887.firebaseapp.com",
-            databaseURL: "https://projectauthentication-fb887.firebaseio.com",
-            projectId: "projectauthentication-fb887",
-            storageBucket: "projectauthentication-fb887.appspot.com",
-            messagingSenderId: "747390017509",
-            appId: "1:747390017509:web:47e9bc92442cf5427c990c",
-            measurementId: "G-DG297MQHPS"
+        const firebaseConfig = {
+          apiKey: "AIzaSyBDCUXt6SdNeEzp0OrYkityF5yAizNrnSw",
+          authDomain: "onestop-vancouver.firebaseapp.com",
+          databaseURL: "https://onestop-vancouver.firebaseio.com",
+          projectId: "onestop-vancouver",
+          storageBucket: "onestop-vancouver.appspot.com",
+          messagingSenderId: "312086852505",
+          appId: "1:312086852505:web:1367eee804946135d55908",
+          measurementId: "G-YHKRGD3VWP"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
         </script>
+    </head>
+
+    <body>
+        <h1>Login / Sign Up</h1>
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
+
+
+
         <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
         <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
         <script>
