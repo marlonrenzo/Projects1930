@@ -8,6 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Landing page</title>
     <style>
+        .wrapper {
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+        }
+
         div.screen {
             margin: 0 auto;
             width: 360px;
@@ -81,7 +87,7 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
                 <h3>OneStop Vancouver</h3>
@@ -94,19 +100,22 @@
                 </li>
             </ul>
         </nav>
-        <div class="burgermenu">
-            <div class="rectangle1"></div>
-            <div class="rectangle2"></div>
-            <div class="rectangle3"></div>
-            <div class='image'></div>
+        <div class="container-fluid">
+
+            <div class="burgermenu">
+                <div class="rectangle1"></div>
+                <div class="rectangle2"></div>
+                <div class="rectangle3"></div>
+                <div class='image'></div>
+            </div>
+            <h1 class="title">ONESTOP</h1>
+            <hr>
+            <p>Welcome to a better shopping experience!</p>
+            <a href="login.html" title="fajardo">
+                <button>Log In / Sign Up</button>
+            </a>
+            <br>
         </div>
-        <h1 class="title">ONESTOP</h1>
-        <hr>
-        <p>Welcome to a better shopping experience!</p>
-        <a href="login.html" title="fajardo">
-            <button>Log In / Sign Up</button>
-        </a>
-        <br>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
