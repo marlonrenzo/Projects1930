@@ -2,14 +2,78 @@
 <html lang="en">
 
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Landing page</title>
+    <style>
+        div.screen{
+            margin: 0 auto;
+            width: 360px;
+            height: 640px;
+            background: linear-gradient( #FBD36D, #FFFFFF);
+        }
+        .title{
+            position: relative;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 42px;
+            text-align: center;
+            top: 2px;
+            margin: 0 auto;
+        }
+        .rectangle1{
+            position: relative;
+            width: 54px;
+            height: 7px;
+            left: 0px;
+            top: 15px;
+            background: #5748FF;
+        }
+        .rectangle2{
+            position: relative;
+            width: 54px;
+            height: 7px;
+            left: 0px;
+            top: 25px;
+            background: #5748FF;
+        }
+        .rectangle3{
+            position: relative;
+            width: 54px;
+            height: 7px;
+            left: 0px;
+            top: 35px;
+            background: #5748FF;
+        }
+        .burgermenu{
+            position: relative;
+            left: 15px;
+        }
+        #image{
+            position: absolute;
+            width: 313px;
+            height: 244px;
+            margin: 0 auto;
+            top: 350px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>This is the landing page of OneStop Vancouver!</h1>
-    <hr>
-    <p>Welcome to a better shopping experience!</p>
-    <center><a href = "login.html" title = "fajardo"><button><h3>Log In / Sign Up</h3></button></a></center><br>
+    
+    <div class="screen">
+        <div class="burgermenu">
+            <div class="rectangle1"></div>
+            <div class="rectangle2"></div>
+            <div class="rectangle3"></div>
+        </div>
+        <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1138257321%2F960x0.jpg" id="image">
+        <h1 class="title">ONESTOP</h1>
+        <hr>
+        <p>Welcome to a better shopping experience!</p>
+        <center><a href = "login.html" title = "fajardo"><button><h3>Log In / Sign Up</h3></button></a></center><br>
+    </div>
 </body>
 
 </html>
