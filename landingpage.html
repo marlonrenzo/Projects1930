@@ -143,10 +143,22 @@
             crossorigin="anonymous"></script>
 
     <script>
+        /*  JQuery version
         $(document).ready(function () {
             $("#sidebarCollapse").click(function () {
                 $("#sidebar").toggleClass("active");
             });
+        });
+         */
+
+        let sidebarCollapse = document.getElementById("sidebarCollapse");
+        sidebarCollapse.addEventListener("click", function() {
+            let sidebar = document.getElementById("sidebar");
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active");
+            } else {
+                sidebar.classList.add("active");
+            }
         });
     </script>
 </body>
