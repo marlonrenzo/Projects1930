@@ -21,7 +21,7 @@
 
 <body class="background">
 
-    <div class="wrapper">
+    <!-- <div class="wrapper"> -->
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -29,31 +29,36 @@
             </div>
             <ul class="list-unstyled components">
                 <li>
-                    <a href="landingpage.html">Home</a>
+                    <a href="landingpage.html" id="toplevel">Home</a>
                 </li>
                 <li>
                     <a href="#shoppingSubmenu" data-toggle="collapse"
-                       aria-expanded="false" class="dropdown-toggle">Shopping</a>
+                       aria-expanded="false" class="dropdown-toggle" id="toplevel">Shopping</a>
                     <ul id="shoppingSubmenu" class="collapse list-unstyled">
-                        <li>
+                        <li id="secondlevel">
                             <a href="#categoriesSubmenu" data-toggle="collapse"
                             aria-expanded="true" class="dropdown-toggle">Categories</a>
                             <ul id="categoriesSubmenu" class="collapse list-unstyled">
-                                <li><a href="#">Tops</a></li>
-                                <li><a href="#">Bottoms</a></li>
-                                <li><a href="#">Outer Wear</a></li>
-                                <li><a href="#">Headwear</a></li>
-                                <li><a href="#">Footwear</a></li>
-                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#" id="toplevel">Tops</a></li>
+                                <li><a href="#" id="toplevel">Bottoms</a></li>
+                                <li><a href="#" id="toplevel">Outer Wear</a></li>
+                                <li><a href="#" id="toplevel">Headwear</a></li>
+                                <li><a href="#" id="toplevel">Footwear</a></li>
+                                <li><a href="#" id="toplevel">Accessories</a></li>
                             </ul>
                         </li>   
-                        <li>
+                        <li id="secondlevel">
                             <a href='#'>Listings by Price</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Locations</a>
+                    <a href="#" id="toplevel">Locations</a>
+                </li>
+                <li>
+                    <a href="login.html" title="fajardo" id="toplevel">
+                        Log In / Sign Up
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -62,21 +67,18 @@
         <div class="container-fluid">
 
 
-            <button type="button" id="sidebarCollapse" class="btn btn-link">
+            <button onclick='collapsing()' id="sidebarCollapse" class="btn btn-link">
                 <img src="images/burgericon.svg" alt="Menu">
             </button>
             <h1 class="title">ONESTOP</h1>
             <hr>
             <p class='openingstatement'>Welcome to a better shopping experience!</p>
-            <a href="login.html" title="fajardo">
-                <button>Log In / Sign Up</button>
-            </a>
             <br>
             
             <img id='image' alt="person holding shopping bag"
                  src="images/shopping.jpg">
         </div>
-    </div>
+    <!-- </div> -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -97,15 +99,25 @@
         });
          */
 
-        let sidebarCollapse = document.getElementById("sidebarCollapse");
-        sidebarCollapse.addEventListener("click", function() {
-            let sidebar = document.getElementById("sidebar");
-            if (sidebar.classList.contains("active")) {
-                sidebar.classList.remove("active");
+        // let sidebarCollapse = document.getElementById("sidebarCollapse");
+        // sidebarCollapse.addEventListener("click", function() {
+        //     let sidebar = document.getElementById("sidebar");
+        //     if (sidebar.classList.contains("active")) {
+        //         sidebar.classList.remove("active");
+        //     } else {
+        //         sidebar.classList.add("active");
+        //     }
+        // });
+    </script>
+    <script>
+        function collapsing() {
+            let sidemenu = document.getElementById('sidebar');
+            if (sidemenu.style.display === 'none') {
+                sidemenu.style.display = 'block';
             } else {
-                sidebar.classList.add("active");
+                sidemenu.style.display = 'none';
             }
-        });
+        }
     </script>
 </body>
 
