@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+​
 <head>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,11 +16,11 @@
             integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
             crossorigin="anonymous"></script>
     <link href="css/onestopVancouver.css" rel="stylesheet"/>
-
+​
 </head>
-
+​
 <body class="background">
-
+​
     <!-- <div class="wrapper"> -->
         <!-- Sidebar -->
         <nav id="sidebar">
@@ -62,11 +62,11 @@
                 </li>
             </ul>
         </nav>
-
+​
         <!-- Main page content -->
         <div class="container-fluid">
-
-
+​
+​
             <button onclick='collapsing()' id="sidebarCollapse" class="btn btn-link">
                 <img src="images/burgericon.svg" alt="Menu">
             </button>
@@ -79,7 +79,7 @@
                  src="images/shopping.jpg">
         </div>
     <!-- </div> -->
-
+​
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
@@ -89,8 +89,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-
-    <script>
+​
+    <!-- <script>
         /*  JQuery version
         $(document).ready(function () {
             $("#sidebarCollapse").click(function () {
@@ -98,7 +98,6 @@
             });
         });
          */
-
         // let sidebarCollapse = document.getElementById("sidebarCollapse");
         // sidebarCollapse.addEventListener("click", function() {
         //     let sidebar = document.getElementById("sidebar");
@@ -108,7 +107,7 @@
         //         sidebar.classList.add("active");
         //     }
         // });
-    </script>
+    </script> -->
     <script>
         function collapsing() {
             let sidemenu = document.getElementById('sidebar');
@@ -118,7 +117,43 @@
                 sidemenu.style.display = 'none';
             }
         }
+        
     </script>
-</body>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyBDCUXt6SdNeEzp0OrYkityF5yAizNrnSw",
+          authDomain: "onestop-vancouver.firebaseapp.com",
+          databaseURL: "https://onestop-vancouver.firebaseio.com",
+          projectId: "onestop-vancouver",
+          storageBucket: "onestop-vancouver.appspot.com",
+          messagingSenderId: "312086852505",
+          appId: "1:312086852505:web:1367eee804946135d55908",
+          measurementId: "G-YHKRGD3VWP"
+        }
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
+        const db = firebase.firestore();
 
+        
+
+        let blackjeans = db.collection('onestop-van').doc('stock').collection('bottoms').doc('Black skinny jeans')
+        blackjeans.get().then(function(doc) {
+            if (doc.exists) {
+                console.log('Data: ', doc.data());
+            } else {
+                console.log('Data does not exist');
+            }
+        }).catch(function(error) {
+            console.log('Error getting data: ', error);
+        })
+    </script>
+
+
+    
+</body>
+​
 </html>
