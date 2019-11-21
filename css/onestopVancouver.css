@@ -68,11 +68,11 @@ ul li {
     background: #5748FF;
 }
 
-#toplevel {
+.toplevel {
     text-decoration: none;
     color: white;
 }
-#secondlevel {
+.secondlevel {
     background: white;
 }
 
