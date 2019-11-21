@@ -13,14 +13,7 @@
     overflow: hidden;
     transition: all 350ms;
     display: none;
-}
-
-#sidebar > ul { /* sidebar menu */
-
-}
-
-#sidebar > ul > li { /* Top-level menu items */
-
+    z-index: 999;
 }
 
 #sidebar.active {
@@ -74,6 +67,11 @@ ul li {
 }
 .secondlevel {
     background: white;
+}
+
+.content {
+    z-index: 998;
+    margin: 0
 }
 
 body {

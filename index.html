@@ -16,12 +16,10 @@
             integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
             crossorigin="anonymous"></script>
     <link href="css/onestopVancouver.css" rel="stylesheet"/>
-​
 </head>
 ​
-<body class="background">
-​
-    <!-- <div class="wrapper"> -->
+<body>
+    <div class="wrapper">
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -78,7 +76,7 @@
             <img id='image' alt="person holding shopping bag"
                  src="images/shopping.jpg">
         </div>
-    <!-- </div> -->
+    </div>
 ​
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -89,25 +87,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-​
-    <!-- <script>
-        /*  JQuery version
-        $(document).ready(function () {
-            $("#sidebarCollapse").click(function () {
-                $("#sidebar").toggleClass("active");
-            });
-        });
-         */
-        // let sidebarCollapse = document.getElementById("sidebarCollapse");
-        // sidebarCollapse.addEventListener("click", function() {
-        //     let sidebar = document.getElementById("sidebar");
-        //     if (sidebar.classList.contains("active")) {
-        //         sidebar.classList.remove("active");
-        //     } else {
-        //         sidebar.classList.add("active");
-        //     }
-        // });
-    </script> -->
     <script>
         function collapsing() {
             let sidemenu = document.getElementById('sidebar');
@@ -132,7 +111,7 @@
           messagingSenderId: "312086852505",
           appId: "1:312086852505:web:1367eee804946135d55908",
           measurementId: "G-YHKRGD3VWP"
-        }
+        };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         // firebase.analytics();
@@ -152,7 +131,7 @@
             }
         }).catch(function(error) {
             console.log('Error getting data: ', error);
-        })
+        });
 
         // Writing the item 'Black Hoodie'
         // This snippet of code is to show that we can add a new item to our firebase database
