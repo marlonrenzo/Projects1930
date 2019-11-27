@@ -79,6 +79,7 @@
         <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+        <script src="js/queries.es6"></script>
         <script>
             // Your web app's Firebase configuration
             var firebaseConfig = {
@@ -98,19 +99,7 @@
 
             // let bottoms = db.collection('onestop-van').doc('stock').collection('bottoms').get()
             // console.log(bottoms)
-            db.collection("onestop-van").doc('stock').collection('outer-wear').get().then(function(querySnapshot) {
-                querySnapshot.forEach(function(doc) {
-                    // doc.data() is never undefined for query doc snapshots
-                    let image = document.createElement("img");
-                    let text = document.createElement("p");
-                    image.id = "listings";
-                    image.src = doc.data().image;
-                    text.innerHTML = doc.id + "<br><br><br>";
-
-                    document.getElementById('listingdiv').appendChild(image);
-                    document.getElementById('listingdiv').appendChild(text);
-                });
-            });
+            queryProducts('outerwear');
         </script>
     </body>
 </html>
