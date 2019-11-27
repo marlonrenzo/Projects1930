@@ -1,0 +1,88 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    float: left;
+    max-width: 250px;
+    min-width: 250px;
+    height: 100vh;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    transition: all 350ms;
+    display: none;
+    z-index: 999;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+div.screen {
+    margin: 0 auto;
+    width: 360px;
+    height: 640px;
+    background: linear-gradient(#FBD36D, #FFFFFF);
+}
+
+.title {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    top: 2px;
+    margin: 0 auto;
+}
+
+.burgermenu {
+    position: relative;
+    left: 15px;
+}
+
+#listingdiv{
+    width:600px;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#listings{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 450px;
+
+}
+
+.openingstatement {
+    text-align: center;
+    font-family: cursive;
+    color: cornflowerblue;
+}
+
+ul li {
+    background: #5748FF;
+}
+
+.toplevel {
+    text-decoration: none;
+    color: white;
+}
+.secondlevel {
+    background: white;
+}
+
+.content {
+    z-index: 998;
+    margin: 0
+}
+
+body {
+    background: linear-gradient(to top, #FFFFFF, #FBD36D) fixed;
+}

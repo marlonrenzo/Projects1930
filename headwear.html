@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bottoms</title>
+    <title>Headwear</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
@@ -97,7 +97,7 @@
 
             // let bottoms = db.collection('onestop-van').doc('stock').collection('bottoms').get()
             // console.log(bottoms)
-            db.collection("onestop-van").doc('stock').collection('bottoms').get().then(function(querySnapshot) {
+            db.collection("onestop-van").doc('stock').collection('headwear').get().then(function(querySnapshot) {
                 querySnapshot.forEach(function(doc) {
                     // doc.data() is never undefined for query doc snapshots
                     let image = document.createElement("img");
