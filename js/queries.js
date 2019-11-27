@@ -8,7 +8,7 @@ function queryProducts(collection_name) {
             image.classList.add("listings");
             image.src = doc.data().image;
             image.onclick = redirect;
-            text.innerHTML = doc.id + "<br><br><br>";
+            text.innerHTML = doc.id + '<br>' + '$' + doc.data().price + "<br><br><br>";
 
             document.getElementById('listingdiv').appendChild(image);
             document.getElementById('listingdiv').appendChild(text);
