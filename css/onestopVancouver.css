@@ -52,7 +52,7 @@ div.screen {
     color: cornflowerblue;
 }
 
-#sidebar li {
+#sidebar li > a {
     padding-top: 5px;
     padding-bottom: 5px;
 }
