@@ -60,13 +60,13 @@
 
             firebase.auth().onAuthStateChanged(function(user) {
                         if (user) {
-                            console.log(" User is signed in.")
+                            console.log(" User is signed in.");
                             document.getElementById('login').innerHTML = 'logout';
     
-                            localStorage.setItem("userID",user.uid)
+                            localStorage.setItem("userID",user.uid);
                             console.log(user.id);
                         } else {
-                            console.log(" User is NOT signed in.")
+                            console.log(" User is NOT signed in.");
     
                         }
                     });
@@ -75,10 +75,10 @@
                 if (localStorage.getItem("userID")) {
                     firebase.auth().signOut().then(
                         () => {
-                            console.log("user signed out")
-                            localStorage.clear()
+                            console.log("user signed out");
+                            localStorage.clear();
                             document.getElementById('login').innerHTML = 'login/sign up';
-    
+                            window.location = 'index.html';
                         }
                     );
                 }
