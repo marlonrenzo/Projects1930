@@ -46,6 +46,11 @@ function importSidebar() {
     sidebarLink.outerHTML = sidebarHtml;
 }
 
+function goToCategory(category) {
+    sessionStorage.setItem("category", category);
+    window.location.href = "productListing.html";
+}
+
 function collapsing() {
     let sidemenu = document.getElementById('sidebar');
     if (sidemenu.style.display === 'none') {
