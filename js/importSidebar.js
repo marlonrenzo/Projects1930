@@ -21,7 +21,7 @@ function importSidebar() {
         '                            <ul id="categoriesSubmenu" class="collapse list-unstyled">\n' +
         '                                <li><a href="#" onclick="goToCategory(\'tops\');" class="toplevel">Tops</a></li>\n' +
         '                                <li><a href="#" onclick="goToCategory(\'bottoms\');" class="toplevel">Bottoms</a></li>\n' +
-        '                                <li><a href="#" onclick="goToCategory(\'outerwear\');" class="toplevel">Outer Wear</a></li>\n' +
+        '                                <li><a href="#" onclick="goToCategory(\'outer-wear\');" class="toplevel">Outer Wear</a></li>\n' +
         '                                <li><a href="#" onclick="goToCategory(\'headwear\');" class="toplevel">Headwear</a></li>\n' +
         '                                <li><a href="#" onclick="goToCategory(\'footwear\');" class="toplevel">Footwear</a></li>\n' +
         '                                <li><a href="#" onclick="goToCategory(\'accessories\');" class="toplevel">Accessories</a></li>\n' +
