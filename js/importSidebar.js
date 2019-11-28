@@ -45,4 +45,14 @@ function importSidebar() {
     let sidebarLink = document.getElementById('sidebar');
     sidebarLink.outerHTML = sidebarHtml;
 }
+
+function collapsing() {
+    let sidemenu = document.getElementById('sidebar');
+    if (sidemenu.style.display === 'none') {
+        sidemenu.style.display = 'block';
+    } else {
+        sidemenu.style.display = 'none';
+    }
+}
+
 importSidebar();

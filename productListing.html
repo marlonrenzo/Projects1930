@@ -19,25 +19,18 @@
     </head>
     <body>
         <span id="sidebar"></span>
-        <div class="container-fluid">
-            ​<button onclick='collapsing()' id="sidebarCollapse" class="btn btn-link">
-            <img src="images/burgericon.svg" alt="Menu">
-            </button>
-            <h1 class="title">ONESTOP</h1>
-            <hr>
+        <div class="content">
+            <div class="container-fluid">
+                ​
+                <button onclick='collapsing()' id="sidebarCollapse" class="btn btn-link">
+                    <img src="images/burgericon.svg" alt="Menu">
+                </button>
+                <h1 class="title">ONESTOP</h1>
+                <hr>
+            </div>
+            <div id="listingdiv"></div>
         </div>
-        <script>
-            function collapsing() {
-                let sidemenu = document.getElementById('sidebar');
-                if (sidemenu.style.display === 'none') {
-                    sidemenu.style.display = 'block';
-                } else {
-                    sidemenu.style.display = 'none';
-                }
-            }
-            
-        </script>
-        <div id="listingdiv"></div>
+
         <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
