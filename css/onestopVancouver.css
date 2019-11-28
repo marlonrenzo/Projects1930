@@ -55,6 +55,12 @@ div.screen {
 #sidebar li > a {
     padding-top: 5px;
     padding-bottom: 5px;
+    display: block;
+}
+
+#sidebar li {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #sidebar .mainMenu {
