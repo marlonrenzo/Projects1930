@@ -62,7 +62,7 @@
                         if (user) {
                             console.log(" User is signed in.");
                             document.getElementById('login').innerHTML = 'logout';
-    
+                            document.getElementById('login').href = 'index.html';
                             localStorage.setItem("userID",user.uid);
                             console.log(user.id);
                         } else {
@@ -78,7 +78,7 @@
                             console.log("user signed out");
                             localStorage.clear();
                             document.getElementById('login').innerHTML = 'login/sign up';
-                            window.location = 'index.html';
+                    
                         }
                     );
                 }
