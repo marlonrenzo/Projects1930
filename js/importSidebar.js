@@ -7,7 +7,7 @@ function importSidebar() {
         '            <div class="sidebar-header">' +
         '                <h3>OneStop Vancouver</h3>' +
         '            </div>' +
-        '            <ul class="list-unstyled components">' +
+        '            <ul class="list-unstyled components mainMenu toplevel">' +
         '                <li>' +
         '                    <a href="index.html" class="toplevel">Home</a>' +
         '                </li>' +
@@ -18,7 +18,7 @@ function importSidebar() {
         '                        <li class="secondlevel">' +
         '                            <a href="#categoriesSubmenu" data-toggle="collapse"' +
         '                            aria-expanded="true" class="dropdown-toggle">Categories</a>' +
-        '                            <ul id="categoriesSubmenu" class="collapse list-unstyled">' +
+        '                            <ul id="categoriesSubmenu" class="collapse list-unstyled toplevel">' +
         '                                <li><a href="#" onclick="goToCategory(\'tops\');" class="toplevel">Tops</a></li>' +
         '                                <li><a href="#" onclick="goToCategory(\'bottoms\');" class="toplevel">Bottoms</a></li>' +
         '                                <li><a href="#" onclick="goToCategory(\'outer-wear\');" class="toplevel">Outer Wear</a></li>' +

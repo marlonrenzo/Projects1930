@@ -52,15 +52,21 @@ div.screen {
     color: cornflowerblue;
 }
 
-ul li {
-    background: #5748FF;
+#sidebar li {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.toplevel {
+#sidebar .mainMenu {
+    font-size: large;
+}
+
+#sidebar .toplevel {
     text-decoration: none;
+    background: #5748FF;
     color: white;
 }
-.secondlevel {
+#sidebar .secondlevel {
     background: white;
 }
 
