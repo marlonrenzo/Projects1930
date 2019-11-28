@@ -18,45 +18,7 @@
     <link href="css/productpage.css" rel="stylesheet"/>
     </head>
     <body>
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>OneStop Vancouver</h3>
-            </div>
-            <ul class="list-unstyled components">
-                <li>
-                    <a href="index.html" class="toplevel">Home</a>
-                </li>
-                <li>
-                    <a href="#shoppingSubmenu" data-toggle="collapse"
-                       aria-expanded="false" class="dropdown-toggle toplevel">Shopping</a>
-                    <ul id="shoppingSubmenu" class="collapse list-unstyled">
-                        <li class="secondlevel">
-                            <a href="#categoriesSubmenu" data-toggle="collapse"
-                            aria-expanded="true" class="dropdown-toggle">Categories</a>
-                            <ul id="categoriesSubmenu" class="collapse list-unstyled">
-                                <li><a href="tops.html" class="toplevel">Tops</a></li>
-                                <li><a href="bottoms.html" class="toplevel">Bottoms</a></li>
-                                <li><a href="outerwear.html" class="toplevel">Outer Wear</a></li>
-                                <li><a href="headwear.html" class="toplevel">Headwear</a></li>
-                                <li><a href="footwear.html" class="toplevel">Footwear</a></li>
-                                <li><a href="accessories.html" class="toplevel">Accessories</a></li>
-                            </ul>
-                        </li>   
-                        <li class="secondlevel">
-                            <a href='#'>Listings by Price</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="toplevel">Locations</a>
-                </li>
-                <li>
-                    <a href="login.html" title="fajardo" class="toplevel">
-                        Log In / Sign Up
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <span id="sidebar"></span>
         <div class="container-fluid">
             ​<button onclick='collapsing()' id="sidebarCollapse" class="btn btn-link">
             <img src="images/burgericon.svg" alt="Menu">
@@ -80,6 +42,7 @@
         <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
         <script src="js/queries.js"></script>
+        <script src="js/importSidebar.js"></script>
         <script src="js/initializeFirebase.js"></script>
         <script>
             // let bottoms = db.collection('onestop-van').doc('stock').collection('bottoms').get()
