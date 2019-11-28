@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Headwear</title>
+    <title>Footwear</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
@@ -80,26 +80,11 @@
         <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
         <script src="js/queries.js"></script>
+        <script src="js/initializeFirebase.js"></script>
         <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-                apiKey: "AIzaSyBDCUXt6SdNeEzp0OrYkityF5yAizNrnSw",
-                authDomain: "onestop-vancouver.firebaseapp.com",
-                databaseURL: "https://onestop-vancouver.firebaseio.com",
-                projectId: "onestop-vancouver",
-                storageBucket: "onestop-vancouver.appspot.com",
-                messagingSenderId: "312086852505",
-                appId: "1:312086852505:web:1367eee804946135d55908",
-                measurementId: "G-YHKRGD3VWP"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            // firebase.firestore();
-            const db = firebase.firestore();
-
             // let bottoms = db.collection('onestop-van').doc('stock').collection('bottoms').get()
             // console.log(bottoms)
-            queryProducts('headwear');
+            queryProducts(localStorage.getItem("category"));
         </script>
     </body>
 </html>
