@@ -53,51 +53,5 @@
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
     <script src="js/initializeFirebase.js"></script>
     <script src="js/importSidebar.js"></script>
-    <script>
-
-
-        // Initialize Firebase
-
-        // firebase.analytics();
-
-
-
-        // Reading the item 'black skinny jeans'
-        // This snippet of code is to show that we can access this specific item from our firebase database
-        // So based on one of our taskflows, if a user searches through the categories 'bottoms', our app should theoretically write
-        // to the screen the details of the item, including where to find it.
-        // let blackjeans = db.collection('onestop-van').doc('stock').collection('bottoms').doc('Black skinny jeans')
-        // blackjeans.get().then(function(doc) {
-        //     if (doc.exists) {
-        //         console.log('Data: ', doc.data());
-        //     } else {
-        //         console.log('Data does not exist');
-        //     }
-        // }).catch(function(error) {
-        //     console.log('Error getting data: ', error);
-        // });
-
-        // Writing the item 'Black Hoodie'
-        // This snippet of code is to show that we can add a new item to our firebase database
-        // Should there be anymore basic items we feel are necessary to include on our site, we can easily do so by writing
-        // to our database directly. And if there are any changes due to a seasonal sale, we can edit it from here.
-        // We plan to include an admin page later to assist with further changes.
-        // db.collection('onestop-van').doc('stock').collection('tops').doc('Black Hoodie').set({
-        //     color: 'black',
-        //     name: 'hoodie',
-        //     gender: 'male',
-        //     price: 25,
-        //     retailer: 'Retailer/hm';
-        // })
-        // .then(function () {
-        //     console.log('Black hoodie added');
-        // })
-        // .catch(function(error) {
-        //     console.error('Error writing data: ', error);
-        // });
-    </script>
-
-
-    
 </body>
 </html>
