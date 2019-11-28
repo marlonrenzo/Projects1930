@@ -1,5 +1,5 @@
 // Your web app's Firebase configuration
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyBDCUXt6SdNeEzp0OrYkityF5yAizNrnSw",
     authDomain: "onestop-vancouver.firebaseapp.com",
     databaseURL: "https://onestop-vancouver.firebaseio.com",
