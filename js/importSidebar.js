@@ -1,3 +1,7 @@
+// To use:
+// 1. Add an element with the id 'sidebar' where one wants the sidebar to be.
+// 2. Include this script.
+
 function importSidebar() {
     let sidebarHtml = '<nav id="sidebar">\n' +
         '            <div class="sidebar-header">\n' +
