@@ -51,9 +51,40 @@
             crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+
     <script src="js/initializeFirebase.js"></script>
     <script src="js/queryRedirection.js"></script>
     <script src="js/importSidebar.js"></script>
+    <script>
+     
+
+            firebase.auth().onAuthStateChanged(function(user) {
+                        if (user) {
+                            console.log(" User is signed in.")
+                            document.getElementById('login').innerHTML = 'logout';
+    
+                            localStorage.setItem("userID",user.uid)
+                            console.log(user.id);
+                        } else {
+                            console.log(" User is NOT signed in.")
+    
+                        }
+                    });
+    
+            document.getElementById('login').addEventListener("click", e => {
+                if (localStorage.getItem("userID")) {
+                    firebase.auth().signOut().then(
+                        () => {
+                            console.log("user signed out")
+                            localStorage.clear()
+                            document.getElementById('login').innerHTML = 'login/sign up';
+    
+                        }
+                    );
+                }
+            });
+    </script>
     <script>
 
 

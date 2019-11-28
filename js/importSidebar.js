@@ -36,7 +36,7 @@ function importSidebar() {
         '                    <a href="#" class="toplevel">Locations</a>\n' +
         '                </li>\n' +
         '                <li>\n' +
-        '                    <a href="login.html" title="fajardo" class="toplevel">\n' +
+        '                    <a href="login.html" id = "login" title="fajardo" class="toplevel">\n' +
         '                        Log In / Sign Up\n' +
         '                    </a>\n' +
         '                </li>\n' +
