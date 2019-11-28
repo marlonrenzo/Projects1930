@@ -13,6 +13,8 @@ function queryProducts(collection_name) {
 
             document.getElementById('listingdiv').appendChild(image);
             document.getElementById('listingdiv').appendChild(text);
+            // Sets the page's title to the current collection_name
+            document.getElementById("pagetitle").innerHTML = collection_name;
             function redirect(){
                 window.location = link;
             }
