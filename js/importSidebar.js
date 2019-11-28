@@ -28,12 +28,12 @@ function importSidebar() {
         '                            </ul>' +
         '                        </li>   ' +
         '                        <li class="secondlevel">' +
-        '                            <a href="#">Listings by Price</a>' +
+        '                            <a href="WIP.html">Listings by Price</a>' +
         '                        </li>' +
         '                    </ul>' +
         '                </li>' +
         '                <li>' +
-        '                    <a href="#" class="toplevel">Locations</a>' +
+        '                    <a href="WIP.html" class="toplevel">Locations</a>' +
         '                </li>' +
         '                <li>' +
         '                    <a href="login.html" id = "login" title="fajardo" class="toplevel">' +
