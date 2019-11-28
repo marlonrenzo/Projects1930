@@ -8,6 +8,7 @@ function queryProducts(collection_name) {
             image.classList.add("listings");
             image.src = doc.data().image;
             image.onclick = redirect;
+            // TODO: Replace line breaks with css stuff
             text.innerHTML = doc.id + '<br>' + '$' + doc.data().price + "<br><br><br>";
 
             document.getElementById('listingdiv').appendChild(image);
