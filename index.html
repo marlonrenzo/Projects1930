@@ -62,7 +62,7 @@
             firebase.auth().onAuthStateChanged(function(user) {
                         if (user) {
                             console.log(" User is signed in.");
-                            document.getElementById('login').innerHTML = 'logout';
+                            document.getElementById('login').innerHTML = 'Logout';
                             document.getElementById('login').href = 'index.html';
                             localStorage.setItem("userID",user.uid);
                             console.log(user.uid);
@@ -88,7 +88,7 @@
                         () => {
                             console.log("user signed out");
                             localStorage.clear();
-                            document.getElementById('login').innerHTML = 'login/sign up';
+                            document.getElementById('login').innerHTML = 'Log In/Sign Up';
                     
                         }
                     );
