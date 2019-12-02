@@ -29,7 +29,7 @@
                 <h1 class="title">ONESTOP</h1>
                 <hr>
             </div>
-            <div id="listingdiv"></div>
+            <div id="shoppingcartdiv"></div>
         </div>
     </div>
 
@@ -50,6 +50,7 @@
     <script src="js/queries.js"></script>
     <script src="js/importSidebar.js"></script>
     <script src="js/initializeFirebase.js"></script>
+    <script src="js/wishlist.js"></script>
     <script>
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
@@ -58,10 +59,12 @@
                 document.getElementById('login').href = 'index.html';
                 localStorage.setItem("userID", user.uid);
                 localStorage.setItem("userName", user.displayName);
+                let currentUser = localStorage.getItem('userName');
                 console.log(user.uid);
+                createShoppingList(currentUser);
             } else {
                 console.log(" User is NOT signed in.");
-
+                alert("Your cart is currently empty.");
             }
         });
 
@@ -77,11 +80,6 @@
                 );
             }
         });
-        setTimeout( ()=>{
-        let currentUser = localStorage.getItem('userName');
-        console.log(currentUser)
-        queryProducts(sessionStorage.getItem("category"), currentUser);
-        }, 1000);
     </script>
 </body>
 </html>

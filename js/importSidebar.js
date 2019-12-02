@@ -40,6 +40,11 @@ function importSidebar() {
         '                        Log In / Sign Up' +
         '                    </a>' +
         '                </li>' +
+        '                <li>' +
+        '                    <a href="shoppingcart.html" id = "cart" class="toplevel">' +
+        '                        Shopping Cart' +
+        '                    </a>' +
+        '                </li>' +
         '            </ul>' +
         '        </nav>';
     let sidebarLink = document.getElementById('sidebar');

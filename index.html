@@ -55,6 +55,7 @@
 
     <script src="js/initializeFirebase.js"></script>
     <script src="js/importSidebar.js"></script>
+    <script src="js/wishlist.js"></script>
     <script>
      
 
@@ -64,7 +65,17 @@
                             document.getElementById('login').innerHTML = 'logout';
                             document.getElementById('login').href = 'index.html';
                             localStorage.setItem("userID",user.uid);
-                            console.log(user.id);
+                            console.log(user.uid);
+                            let currentUser = firebase.auth().currentUser.displayName;
+                            db.collection('Users').doc(currentUser).get().then((docSnapshot)=> {
+                                if (docSnapshot.exists) {
+                                    db.collection('Users').doc(currentUser).onSnapshot((doc) => {
+
+                                    });
+                                } else{
+                                    createUserProfile(currentUser);
+                                }
+                            })
                         } else {
                             console.log(" User is NOT signed in.");
     

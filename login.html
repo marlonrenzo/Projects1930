@@ -37,7 +37,7 @@
             let uiConfig = {
                     callbacks: {
                         signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-                            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+                            firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
                         // User successfully signed in.
                         // Return type determines whether we continue the redirect automatically
                         // or whether we leave that to developer to handle.
