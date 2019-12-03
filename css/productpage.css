@@ -14,6 +14,10 @@
 
 }
 
+.listings:hover{
+    cursor: pointer;
+}
+
 .addtocart{
     border: 2px solid #5748FF;
     background-color:#5748FF;
@@ -25,4 +29,8 @@
     background-color:white;
     color: #5748FF;
     width: 300px;
+}
+
+p{
+    text-align: center;
 }

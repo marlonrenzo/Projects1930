@@ -6,11 +6,14 @@ function queryProducts(collection_name, user) {
             let text = document.createElement("p");
             let link = doc.data().link;
             let btn = document.createElement("input");
+
+            btn.alt = link;
             btn.name = doc.data().name;
             btn.classList.add("addtocart");
             btn.id = doc.data().image;
             btn.type = "button";
             btn.value = "Add to Cart";
+
             image.classList.add("listings");
             image.src = doc.data().image;
             image.onclick = redirect;
@@ -25,7 +28,8 @@ function queryProducts(collection_name, user) {
             document.getElementById(btn.id).addEventListener("click", ()=>{
                     db.collection("Users").doc(user).update({
                         wishlist: firebase.firestore.FieldValue.arrayUnion(btn.name),
-                        itemImages: firebase.firestore.FieldValue.arrayUnion(btn.id)
+                        itemImages: firebase.firestore.FieldValue.arrayUnion(btn.id),
+                        links: firebase.firestore.FieldValue.arrayUnion(btn.alt)
                 })
             });
             function redirect(){
