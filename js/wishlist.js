@@ -15,10 +15,11 @@ function createShoppingList(currentUser) {
                 
                 let image = document.createElement('img');
                 image.src = shoppingCartitemsImages[i];
+                image.classList.add("listings");
                 let text = document.createElement('p');
                 text.innerHTML = shoppingCartitems[i];
-                document.getElementById('shoppingcartdiv').appendChild(image);
-                document.getElementById('shoppingcartdiv').appendChild(text);
+                document.getElementById('listingsdiv').appendChild(image);
+                document.getElementById('listingsdiv').appendChild(text);
             }
         }
     })

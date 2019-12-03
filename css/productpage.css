@@ -13,3 +13,16 @@
     height: 450px;
 
 }
+
+.addtocart{
+    border: 2px solid #5748FF;
+    background-color:#5748FF;
+    color: white;
+    width: 300px;
+}
+
+.addtocart:hover{
+    background-color:white;
+    color: #5748FF;
+    width: 300px;
+}

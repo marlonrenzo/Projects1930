@@ -7,6 +7,7 @@ function queryProducts(collection_name, user) {
             let link = doc.data().link;
             let btn = document.createElement("input");
             btn.name = doc.data().name;
+            btn.classList.add("addtocart");
             btn.id = doc.data().image;
             btn.type = "button";
             btn.value = "Add to Cart";
