@@ -31,6 +31,36 @@
     width: 300px;
 }
 
+.retailermap{
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+}
+.retailerbuttons{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+button{
+    border: 5px solid #5748FF;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: #5748FF;
+}
+
+.logos{
+    width:100px;
+    height:100px;
+}
+#map{
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+
 p{
     text-align: center;
 }

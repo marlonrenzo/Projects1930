@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title id="pagetitle">Products</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+            integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+            crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+            integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+            crossorigin="anonymous"></script>
+    <link href="css/onestopVancouver.css" rel="stylesheet"/>
+    <link href="css/productpage.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="wrapper">
+        <span id="sidebar"></span>
+        <div class="content">
+            <div class="container-fluid">
+                ​
+                <button onclick='collapsing()' id="sidebarCollapse" class="btn btn-link">
+                    <img src="images/burgericon.svg" alt="Menu">
+                </button>
+                <h1 class="title">ONESTOP</h1>
+                <hr>
+            </div>
+
+            <div class="retailerbuttons">
+                <a id="hm"><button><img class="logos" src="https://seeklogo.net/wp-content/uploads/2014/10/h-m-logo.png"></button></a>
+                <a id="amerEagle"><button><img class="logos" src="https://www.parquelacolina.com/wp-content/uploads/2018/11/American-eagle.png"></button></a>
+                <a id="joeFresh"><button><img class="logos" src="https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1432634568/scqdowljgywpmw6yokvj.png"></button></a>
+                <a id="uniqlo"><button><img class="logos" src="https://seeklogo.net/wp-content/uploads/2014/10/Uniqlo-logo.png"></button></a>
+                <a id="oldNavy"><button><img class="logos" src="https://cdn.freebiesupply.com/logos/large/2x/old-navy-logo-png-transparent.png"></button></a>
+                <a id="walmart"><button><img class="logos" src="https://cdn.iconscout.com/icon/free/png-512/walmart-282199.png"></button></a>
+                <a id="zara"><button><img class="logos" src="https://brandslogo.net/wp-content/uploads/2014/10/zara-logo-preview.png"></button></a>
+            </div>
+
+            <div class="retailermap">
+                <iframe id="map" frameborder="0" sallowfullscreen="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4586.515656427659!2d-123.12009560249864!3d49.28204836967342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867178c6f02ee1%3A0xb4e03bf432e66714!2sBCIT%20Downtown%20Campus!5e0!3m2!1sen!2sca!4v1575416712730!5m2!1sen!2sca"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <!-- <script src="js/queries.js"></script> -->
+    <script src="js/importSidebar.js"></script>
+    <script src="js/initializeFirebase.js"></script>
+    <!-- <script src="js/wishlist.js"></script> -->
+    <script>
+        // firebase.auth().onAuthStateChanged(function(user) {
+        //     if (user) {
+        //         console.log(" User is signed in.");
+        //         document.getElementById('login').innerHTML = 'Logout';
+        //         document.getElementById('login').href = 'index.html';
+        //         localStorage.setItem("userID", user.uid);
+        //         localStorage.setItem("userName", user.displayName);
+        //         let currentUser = localStorage.getItem('userName');
+        //         console.log(user.uid);
+        //         createShoppingList(currentUser);
+        //     } else {
+        //         console.log(" User is NOT signed in.");
+        //         alert("Your cart is currently empty.");
+        //     }
+        // });
+
+        // document.getElementById('login').addEventListener("click", e => {
+        //     if (localStorage.getItem("userID")) {
+        //         firebase.auth().signOut().then(
+        //             () => {
+        //                 console.log("user signed out");
+        //                 localStorage.clear();
+        //                 document.getElementById('login').innerHTML = 'Log In/Sign Up';
+                
+        //             }
+        //         );
+        //     }
+        // });
+    </script>
+    <script>
+        let retailerLinks = {'hm' : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16673.111607678667!2d-123.12557323144735!3d49.28289236590877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x692a297fdc2a2f40!2zSCZN!5e0!3m2!1sen!2sca!4v1575416541323!5m2!1sen!2sca',
+        'amerEagle': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57782.04097249409!2d-123.17137380682024!3d49.266980634030986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717f147d5de5%3A0x8ae0215e54d985a0!2sAmerican%20Eagle%20Store!5e0!3m2!1sen!2sca!4v1575413193548!5m2!1sen!2sca',
+        'joeFresh': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23966.719655677676!2d-123.13225963498319!3d49.28807572540166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867178a4ab4401%3A0x290b92f40a0a75ee!2sJoe%20Fresh!5e0!3m2!1sen!2sca!4v1575413303549!5m2!1sen!2sca',
+        'oldNavy': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83276.07101541171!2d-123.18214231663703!3d49.288197001053206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717fbaf503a1%3A0x8e3e0a2eab7679d6!2sOld%20Navy!5e0!3m2!1sen!2sca!4v1575413613253!5m2!1sen!2sca',
+        'uniqlo': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117482.12513208414!2d-123.07357368783632!3d49.251442995560936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbb333611ee94ff8d!2sUNIQLO!5e0!3m2!1sen!2sca!4v1575413693919!5m2!1sen!2sca',
+        'walmart': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d166675.48592827586!2d-123.07357382893795!3d49.251674781753415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2582fa73c62fda9!2sWalmart%20North%20Vancouver%20Supercentre!5e0!3m2!1sen!2sca!4v1575413798504!5m2!1sen!2sca',
+        'zara': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d166674.54441803286!2d-123.07357411296013!3d49.25195363958502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2758543ebd7d5b33!2sZara!5e0!3m2!1sen!2sca!4v1575413833391!5m2!1sen!2sca'};
+        let keys = Object.keys(retailerLinks);
+        
+        // Adds event listener to each button within the object retailerLinks
+        for ( let i = 0; i < keys.length; i++){
+            document.getElementById(keys[i]).addEventListener("click", ()=>{
+                document.getElementById('map').src = retailerLinks[keys[i]];
+            });
+        }
+        
+    </script>
+</body>
+</html>
