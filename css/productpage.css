@@ -4,7 +4,7 @@
     margin: 0 auto;
     text-align: center;
     background-color: white;
-    border: 2px solid grey;
+    border: 8px solid #5748FF;
 }
 
 .listings{
@@ -59,7 +59,7 @@ button.retailer:hover{
     height:100px;
 }
 .mapwindow{
-    border: 2px solid grey;
+    border: 4px solid #5748FF;
     margin: auto;
     margin-top:25px;
     width: 925px;

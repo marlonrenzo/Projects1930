@@ -24,8 +24,8 @@ function createShoppingList(currentUser) {
                 image.classList.add("listings");
                 let text = document.createElement('p');
                 text.innerHTML = shoppingCartitems[i];
-                document.getElementById('listingsdiv').appendChild(image);
-                document.getElementById('listingsdiv').appendChild(text);
+                document.getElementById('listingdiv').appendChild(image);
+                document.getElementById('listingdiv').appendChild(text);
             }
         }
     })
