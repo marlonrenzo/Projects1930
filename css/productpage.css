@@ -42,12 +42,12 @@
     text-align: center;
 }
 
-button{
+button.retailer{
     border: 5px solid #5748FF;
     border-radius: 10px;
 }
 
-button:hover{
+button.retailer:hover{
     background-color: #5748FF;
 }
 
