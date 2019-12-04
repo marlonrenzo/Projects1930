@@ -34,44 +34,6 @@
     width: 300px;
 }
 
-.retailermap{
-    margin-top: 100px;
-    width: 100%;
-    text-align: center;
-}
-.retailerbuttons{
-    margin-top: 50px;
-    width: 100%;
-    text-align: center;
-}
-
-button.retailer{
-    border: 5px solid #5748FF;
-    border-radius: 10px;
-}
-
-button.retailer:hover{
-    background-color: #5748FF;
-}
-
-.logos{
-    width:100px;
-    height:100px;
-}
-.mapwindow{
-    border: 4px solid #5748FF;
-    margin: auto;
-    margin-top:25px;
-    width: 925px;
-    height: 740px;
-    background-color: white
-}
-#map{
-    width: 875px;
-    height: 450px;
-    border: 0;
-}
-
 p{
     text-align: center;
 }
