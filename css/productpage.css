@@ -55,8 +55,16 @@ button:hover{
     width:100px;
     height:100px;
 }
+.mapwindow{
+    border: 2px solid grey;
+    margin: auto;
+    margin-top:25px;
+    width: 925px;
+    height: 740px;
+    background-color: white
+}
 #map{
-    width: 600px;
+    width: 875px;
     height: 450px;
     border: 0;
 }
