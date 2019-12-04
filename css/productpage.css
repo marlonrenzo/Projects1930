@@ -1,12 +1,15 @@
 #listingdiv{
     width:600px;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
     text-align: center;
+    background-color: white;
+    border: 2px solid grey;
 }
 
 .listings{
     display: block;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     width: 300px;
