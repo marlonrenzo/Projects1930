@@ -33,7 +33,7 @@ function importSidebar() {
         '                    </ul>' +
         '                </li>' +
         '                <li>' +
-        '                    <a href="WIP.html" class="toplevel">Locations</a>' +
+        '                    <a href="map.html" class="toplevel">Locations</a>' +
         '                </li>' +
         '                <li>' +
         '                    <a href="login.html" id = "login" title="fajardo" class="toplevel">' +
