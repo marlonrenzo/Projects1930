@@ -76,10 +76,15 @@ div.screen {
     background: white;
 }
 
+#sidebarCollapse:hover{
+    background-color: white;
+}
+
 .content {
     z-index: 998;
     margin: 0;
     width: 100%;
+    height: auto;
 }
 
 body {
