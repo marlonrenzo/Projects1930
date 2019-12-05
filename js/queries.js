@@ -35,6 +35,7 @@ function queryProducts(collection_name, user) { // This function receives two pa
                         itemImages: firebase.firestore.FieldValue.arrayUnion(btn.id), // Add the image coinciding with the product to an array called itemImages
                         links: firebase.firestore.FieldValue.arrayUnion(btn.alt) // Add the link coinciding with the product to an array called links
                     })
+                    btn.remove();
                 });
             } else {
                 let image = document.createElement("img"); // Create an image element
