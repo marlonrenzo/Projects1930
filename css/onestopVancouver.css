@@ -78,13 +78,28 @@
 #sidebar .secondlevel {
     background: white;
 }
-#sidebarCollapse:hover{
+.shoppingbutton{
+    margin-left: 0 auto;
+    margin-top: 7%;
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+#beginShopping{
+    border: 3px solid #5748FF;
+    border-radius: 10px;
+    width: 80%;
+    height: 150px;
+    background-color:#5748FF;
+    color:white;
+}
+#beginShopping:hover{
     background-color: white;
+    color: #5748FF;
 }
 #sidebarCollapse:hover{
     background-color: white;
 }
-
 .content {
     z-index: 998;
     margin: 0;
@@ -100,5 +115,12 @@ body {
     .imageWindow{
         width: 45%;
         margin-top: auto;
+    }
+    .shoppingbutton{
+        margin-top: 5%;
+    }
+    #beginShopping{
+        width: 45%;
+        height: auto;
     }
 }
