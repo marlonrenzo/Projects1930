@@ -30,15 +30,13 @@
 .title {
     position: relative;
     font-style: normal;
-    font-weight: 500;
     font-size: 36px;
     line-height: 42px;
     text-align: center;
-    margin: 0 auto;
 }
 .imageWindow{ /* the image on the landing page*/
     border: 3px solid #5748FF;
-    margin: auto;
+    margin: 0 auto;
     margin-top: 10%;
     width: 85%;
     height: 70%;
@@ -99,27 +97,8 @@ body {
 }
 
 @media only screen and (min-width:768px){
-    #listingdiv{
-        width: 70%;
-    }
-    .listings{
-        width: 60%;
-    }
-    .addtocart{
-        color: white;
-        width: 60%;
-    }
-}
-
-@media only screen and (min-width:1000px){
-    #listingdiv{
-        width: 60%;
-    }
-    .listings{
-        width: 50%;
-    }
-    .addtocart{
-        color: white;
-        width: 50%;
+    .imageWindow{
+        width: 45%;
+        margin-top: auto;
     }
 }
