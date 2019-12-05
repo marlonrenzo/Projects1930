@@ -64,43 +64,7 @@
             <script src="js/initializeFirebase.js"></script>
             <script src="js/importSidebar.js"></script>
             <script src="js/wishlist.js"></script>
-    <script>
-        firebase.auth().onAuthStateChanged(function(user) {
-                    if (user) {
-                        console.log(" User is signed in.");
-                        document.getElementById('login').innerHTML = 'Logout';
-                        document.getElementById('login').href = 'index.html';
-                        localStorage.setItem("userID",user.uid);
-                        console.log(user.uid);
-                        let currentUser = firebase.auth().currentUser.displayName;
-                        db.collection('Users').doc(currentUser).get().then((docSnapshot)=> {
-                            if (docSnapshot.exists) {
-                                db.collection('Users').doc(currentUser).onSnapshot((doc) => {
-
-                                });
-                            } else{
-                                createUserProfile(currentUser);
-                            }
-                        })
-                    } else {
-                        console.log(" User is NOT signed in.");
-
-                    }
-                });
-
-        document.getElementById('login').addEventListener("click", e => {
-            if (localStorage.getItem("userID")) {
-                firebase.auth().signOut().then(
-                    () => {
-                        console.log("user signed out");
-                        localStorage.clear();
-                        document.getElementById('login').innerHTML = 'Log In/Sign Up';
-                
-                    }
-                );
-            }
-        });
-    </script>
+    <script src="js/authCheck.js"></script>
     <script>
         let retailerLinks = {'hm' : 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16673.111607678667!2d-123.12557323144735!3d49.28289236590877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x692a297fdc2a2f40!2zSCZN!5e0!3m2!1sen!2sca!4v1575416541323!5m2!1sen!2sca',
         'amerEagle': 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57782.04097249409!2d-123.17137380682024!3d49.266980634030986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717f147d5de5%3A0x8ae0215e54d985a0!2sAmerican%20Eagle%20Store!5e0!3m2!1sen!2sca!4v1575413193548!5m2!1sen!2sca',
