@@ -14,9 +14,9 @@ function createShoppingList(currentUser) {
             let shoppingCartitemsImages = doc.data().itemImages; // Assign the images array to a variable
             let shoppingCartLinks = doc.data().links; // Assign the links array to a variable
             for (let i=0; i<shoppingCartitems.length; i++) {
-                let link = shoppingCartLinks[i]; // Add to the link array
+                let link = shoppingCartLinks[i]; // Add the link to the product to a variable 
                 let image = document.createElement('img'); // Create an image element
-                image.onclick = function(){ // On clicking the image, relocate the window page to the coinciding product page
+                image.onclick = function(){ // Relocate to product page
                     window.location = link;
                 };
                 image.src = shoppingCartitemsImages[i]; // Assign the source of the image to the image of the item
@@ -27,17 +27,17 @@ function createShoppingList(currentUser) {
                 document.getElementById('listingdiv').appendChild(image); // Add image to screen
                 document.getElementById('listingdiv').appendChild(text); // Add text to screen
 
-                let btn = document.createElement('button');
-                btn.innerHTML = "Remove from cart";
+                let btn = document.createElement('button'); // Create a button element
+                btn.innerHTML = "Remove from cart"; // Name the button "Remove from cart"
 
-                btn.onclick = function(){
+                btn.onclick = function(){ // On click, remove the item from user's shopping list
                     db.collection('Users').doc(currentUser).update({
                         wishlist: firebase.firestore.FieldValue.arrayRemove(shoppingCartitems[i]),
                         itemImages: firebase.firestore.FieldValue.arrayRemove(shoppingCartitemsImages[i]),
                         links: firebase.firestore.FieldValue.arrayRemove(shoppingCartLinks[i])
                     });
                 };
-                document.getElementById('listingdiv').appendChild(btn);
+                document.getElementById('listingdiv').appendChild(btn); // Add the button to the screen
             }
         }
     })

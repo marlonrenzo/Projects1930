@@ -58,21 +58,20 @@
     <script>
      
 
-            firebase.auth().onAuthStateChanged(function(user) {
+            firebase.auth().onAuthStateChanged(function(user) { // Check authentication state
                         if (user) {
                             console.log(" User is signed in.");
-                            document.getElementById('login').innerHTML = 'Logout';
+                            document.getElementById('login').innerHTML = 'Logout'; // once logged in, change text to logout
                             document.getElementById('login').href = 'index.html';
-                            localStorage.setItem("userID",user.uid);
-                            console.log(user.uid);
+                            localStorage.setItem("userID",user.uid); // Set cache to current user
                             let currentUser = firebase.auth().currentUser.displayName;
-                            db.collection('Users').doc(currentUser).get().then((docSnapshot)=> {
-                                if (docSnapshot.exists) {
+                            db.collection('Users').doc(currentUser).get().then((docSnapshot)=> { 
+                                if (docSnapshot.exists) { // If the user's profile exists, grab it
                                     db.collection('Users').doc(currentUser).onSnapshot((doc) => {
 
                                     });
-                                } else{
-                                    createUserProfile(currentUser);
+                                } else{ // If the user's profile doesn't exist, make it
+                                    createUserProfile(currentUser); 
                                 }
                             })
                         } else {
@@ -81,7 +80,7 @@
                         }
                     });
     
-            document.getElementById('login').addEventListener("click", e => {
+            document.getElementById('login').addEventListener("click", e => { // If clicked, sign out
                 if (localStorage.getItem("userID")) {
                     firebase.auth().signOut().then(
                         () => {
