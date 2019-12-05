@@ -28,21 +28,28 @@
     font-size: 36px;
     line-height: 42px;
     text-align: center;
-    top: 2px;
+    /* top: 2px; */
     margin: 0 auto;
+}
+.imageWindow{
+    border: 3px solid #5748FF;
+    margin: auto;
+    margin-top: 10%;
+    width: 85%;
+    height: 70%;
+    background-color: white;
+    text-align: center;
 }
 
 #image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    margin-bottom: 5%;
+    width: 90%;
 }
 
 .openingstatement {
     text-align: center;
     font-family: cursive;
-    color: cornflowerblue;
+    color: #5748FF;
 }
 
 #sidebar li > a {
@@ -68,7 +75,9 @@
 #sidebar .secondlevel {
     background: white;
 }
-
+#sidebarCollapse:hover{
+    background-color: white;
+}
 #sidebarCollapse:hover{
     background-color: white;
 }
@@ -82,4 +91,30 @@
 
 body {
     background: linear-gradient(to top, #FFFFFF, #FBD36D) fixed;
+}
+
+@media only screen and (min-width:768px){
+    #listingdiv{
+        width: 70%;
+    }
+    .listings{
+        width: 60%;
+    }
+    .addtocart{
+        color: white;
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width:1000px){
+    #listingdiv{
+        width: 60%;
+    }
+    .listings{
+        width: 50%;
+    }
+    .addtocart{
+        color: white;
+        width: 50%;
+    }
 }
