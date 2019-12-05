@@ -1,14 +1,13 @@
-function queryProducts(collection_name, user) {
+function queryProducts(collection_name, user) { // This function receives two parameters, the name of the category selected, and the user if someone is logged in
     db.collection("onestop-van").doc('stock').collection(collection_name).orderBy('price').get().then(function (querySnapshot) {
-        querySnapshot.forEach(function (doc) {
-            // doc.data() is never undefined for query doc snapshots
-            let image = document.createElement("img");
-            let text = document.createElement("p");
-            let link = doc.data().link;
-            let btn = document.createElement("input");
+        querySnapshot.forEach(function (doc) { // Based on the category selected, this function will display all the items in the category collection
+            let image = document.createElement("img"); // Create an image element
+            let text = document.createElement("p"); // Create a text element
+            let link = doc.data().link; // Set the link string to a variable
+            let btn = document.createElement("input"); // Create an input element
 
-            btn.alt = link;
-            btn.name = doc.data().name;
+            btn.alt = link; // Set the btn variable's alt attribute to the link string
+            btn.name = doc.data().name; // Set the btn variable's name to the 
             btn.classList.add("addtocart");
             btn.id = doc.data().image;
             btn.type = "button";

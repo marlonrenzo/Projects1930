@@ -1,11 +1,11 @@
-@font-face{
+@font-face{ /* external fonts imported to be used */
     font-family: "one";
     src: url("../SansationRegular.woff");
 }
 *{
     font-family: "one";
 }
-.wrapper {
+.wrapper { /* encompassing the sidebar, title, and image */
     width: 100%;
     display: flex;
     align-items: stretch;
@@ -29,16 +29,14 @@
 
 .title {
     position: relative;
-    /* font-family: 'Open Sans', sans-serif; */
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
     line-height: 42px;
     text-align: center;
-    /* top: 2px; */
     margin: 0 auto;
 }
-.imageWindow{
+.imageWindow{ /* the image on the landing page*/
     border: 3px solid #5748FF;
     margin: auto;
     margin-top: 10%;
@@ -48,24 +46,24 @@
     text-align: center;
 }
 
-#image {
+#image { /* image placement on landing page */
     margin-bottom: 5%;
     width: 90%;
 }
 
-.openingstatement {
+.openingstatement { /*line of text introducing our page */
     text-align: center;
     font-family: cursive;
     color: #5748FF;
 }
 
-#sidebar li > a {
+#sidebar li > a { /* padding for each element in the list to make each element more spaced out */
     padding-top: 5px;
     padding-bottom: 5px;
     display: block;
 }
 
-#sidebar li {
+#sidebar li { /* padding for the list itself to help make each button more spaced out */
     padding-top: 5px;
     padding-bottom: 5px;
 }
