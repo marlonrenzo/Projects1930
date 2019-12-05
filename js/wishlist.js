@@ -24,8 +24,6 @@ function createShoppingList(currentUser) {
                 image.classList.add("listings");
                 let text = document.createElement('p'); // Create a text element
                 text.innerHTML = shoppingCartitems[i]; // Change the text to the name of the item
-                
-                
 
                 let btn = document.createElement('button'); // Create a button element
                 btn.classList.add("addtocart");
@@ -37,6 +35,9 @@ function createShoppingList(currentUser) {
                         itemImages: firebase.firestore.FieldValue.arrayRemove(shoppingCartitemsImages[i]),
                         links: firebase.firestore.FieldValue.arrayRemove(shoppingCartLinks[i])
                     });
+                    image.remove();
+                    btn.remove();
+                    text.remove();
                 };
                 document.getElementById('listingdiv').appendChild(image); // Add image to screen
                 document.getElementById('listingdiv').appendChild(btn); // Add the button to the screen
