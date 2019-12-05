@@ -40,8 +40,8 @@ function createShoppingList(currentUser) {
                     text.remove();
                 };
                 document.getElementById('listingdiv').appendChild(image); // Add image to screen
-                document.getElementById('listingdiv').appendChild(btn); // Add the button to the screen
                 document.getElementById('listingdiv').appendChild(text); // Add image to screen
+                document.getElementById('listingdiv').appendChild(btn); // Add the button to the screen
             }
         }
     })
