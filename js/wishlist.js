@@ -25,11 +25,12 @@ function createShoppingList(currentUser) {
                 let text = document.createElement('p'); // Create a text element
                 text.innerHTML = shoppingCartitems[i]; // Change the text to the name of the item
                 document.getElementById('listingdiv').appendChild(image); // Add image to screen
-                document.getElementById('listingdiv').appendChild(text); // Add text to screen
+                
 
                 let btn = document.createElement('button');
+                btn.classList.add("addtocart");
                 btn.innerHTML = "Remove from cart";
-
+                
                 btn.onclick = function(){
                     db.collection('Users').doc(currentUser).update({
                         wishlist: firebase.firestore.FieldValue.arrayRemove(shoppingCartitems[i]),
@@ -38,6 +39,7 @@ function createShoppingList(currentUser) {
                     });
                 };
                 document.getElementById('listingdiv').appendChild(btn);
+                document.getElementById('listingdiv').appendChild(text); // Add text to screen
             }
         }
     })
