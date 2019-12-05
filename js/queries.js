@@ -3,7 +3,7 @@ function queryProducts(collection_name, user) { // This function receives two pa
         image.classList.add("listings"); // Add a class to the image element
         image.src = doc.data().image; // Set the reference of the image element to refer to the image
         image.onclick = redirect; // On clicking the image, redirect
-        text.innerHTML = doc.id + '<br>' + '$' + doc.data().price + "<br><br><br>"; // Add the name and price of the product to the text element
+        text.innerHTML = doc.id + '<br>' + '$' + doc.data().price; // Add the name and price of the product to the text element
 
         document.getElementById('titletext').innerHTML = collection_name.toUpperCase(); // Change the title of each category when displayed to uppercase
         document.getElementById('listingdiv').appendChild(image); // Add the image to the screen
@@ -28,6 +28,7 @@ function queryProducts(collection_name, user) { // This function receives two pa
                 btn.value = "Add to Cart"; // Change the name of the button itself to the given string
 
                 createProductElements(image, doc, redirect, text);
+                document.getElementById('listingdiv').appendChild(btn);
                 document.getElementById(btn.id).addEventListener("click", () => { // Wait to be clicked and update accordingly
                     db.collection("Users").doc(user).update({
                         wishlist: firebase.firestore.FieldValue.arrayUnion(btn.name), // Add the name coinciding with the product to an array called wishlist
