@@ -36,26 +36,26 @@ p{ /* The product descriptions */
 
 @media only screen and (min-width:768px){
     #listingdiv{
-        width: 70%;
+        width: 50%;
     }
     .listings{
-        width: 60%;
+        width: 40%;
     }
     .addtocart{
         color: white;
-        width: 60%;
+        width: 40%;
     }
 }
 
 @media only screen and (min-width:1000px){
     #listingdiv{
-        width: 60%;
+        width: 40%;
     }
     .listings{
-        width: 50%;
+        width: 30%;
     }
     .addtocart{
         color: white;
-        width: 50%;
+        width: 30%;
     }
 }
