@@ -13,7 +13,7 @@ function createShoppingList(currentUser) {
             let shoppingCartitems = doc.data().wishlist;
             let shoppingCartitemsImages = doc.data().itemImages;
             let shoppingCartLinks = doc.data().links;
-            for (i=0; i<shoppingCartitems.length; i++) {
+            for ( let i=0; i<shoppingCartitems.length; i++) {
                 let link = shoppingCartLinks[i];
                 let image = document.createElement('img');
                 image.onclick = function(){
@@ -26,6 +26,18 @@ function createShoppingList(currentUser) {
                 text.innerHTML = shoppingCartitems[i];
                 document.getElementById('listingdiv').appendChild(image);
                 document.getElementById('listingdiv').appendChild(text);
+
+                let btn = document.createElement('button');
+                btn.innerHTML = "Remove from cart";
+
+                btn.onclick = function(){
+                    db.collection('Users').doc(currentUser).update({
+                        wishlist: firebase.firestore.FieldValue.arrayRemove(shoppingCartitems[i]),
+                        itemImages: firebase.firestore.FieldValue.arrayRemove(shoppingCartitemsImages[i]),
+                        links: firebase.firestore.FieldValue.arrayRemove(shoppingCartLinks[i])
+                    });
+                };
+                document.getElementById('listingdiv').appendChild(btn);
             }
         }
     })
