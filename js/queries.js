@@ -25,11 +25,15 @@ function queryProducts(collection_name, user) { // This function receives two pa
             // Sets the page's title to the current collection_name
             document.getElementById("pagetitle").innerHTML = collection_name; // Give the site itself the category name
             document.getElementById(btn.id).addEventListener("click", ()=>{ // Wait to be clicked and update accordingly
+                if (user) {
                     db.collection("Users").doc(user).update({
                         wishlist: firebase.firestore.FieldValue.arrayUnion(btn.name), // Add the name coinciding with the product to an array called wishlist
                         itemImages: firebase.firestore.FieldValue.arrayUnion(btn.id), // Add the image coinciding with the product to an array called itemImages
                         links: firebase.firestore.FieldValue.arrayUnion(btn.alt) // Add the link coinciding with the product to an array called links
                 })
+                    }else {
+                        alert("Please sign in first.");
+                    }
             });
             function redirect(){ // On clicking the image, the window is automatically redirected to the source of the item
                 window.location = link;
