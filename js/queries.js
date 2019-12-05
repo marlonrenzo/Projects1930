@@ -37,6 +37,9 @@ function queryProducts(collection_name, user) { // This function receives two pa
                     })
                     btn.remove();
                 });
+            function redirect() { // On clicking the image, the window is automatically redirected to the source of the item
+                window.location = link;
+            }
             } else {
                 let image = document.createElement("img"); // Create an image element
                 let text = document.createElement("p"); // Create a text element
@@ -44,9 +47,7 @@ function queryProducts(collection_name, user) { // This function receives two pa
                 createProductElements(image, doc, redirect, text);
             }
 
-            function redirect() { // On clicking the image, the window is automatically redirected to the source of the item
-                window.location = link;
-            }
+            
         });
     });
 }
