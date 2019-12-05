@@ -18,20 +18,20 @@ function queryProducts(collection_name, user) { // This function receives two pa
             image.onclick = redirect; // On clicking the image, redirect
             text.innerHTML = doc.id + '<br>' + '$' + doc.data().price + "<br><br><br>"; // Add the name and price of the product to the text element
 
-            document.getElementById('titletext').innerHTML = collection_name.toUpperCase();
+            document.getElementById('titletext').innerHTML = collection_name.toUpperCase(); // Change the title of each category when displayed to uppercase
             document.getElementById('listingdiv').appendChild(image); // Add the image to the screen
             document.getElementById('listingdiv').appendChild(btn); // Add the "Add to cart" button to the screen
             document.getElementById('listingdiv').appendChild(text); // Add text to the screen
             // Sets the page's title to the current collection_name
-            document.getElementById("pagetitle").innerHTML = collection_name;
-            document.getElementById(btn.id).addEventListener("click", ()=>{
+            document.getElementById("pagetitle").innerHTML = collection_name; // Give the site itself the category name
+            document.getElementById(btn.id).addEventListener("click", ()=>{ // Wait to be clicked and update accordingly
                     db.collection("Users").doc(user).update({
-                        wishlist: firebase.firestore.FieldValue.arrayUnion(btn.name),
-                        itemImages: firebase.firestore.FieldValue.arrayUnion(btn.id),
-                        links: firebase.firestore.FieldValue.arrayUnion(btn.alt)
+                        wishlist: firebase.firestore.FieldValue.arrayUnion(btn.name), // Add the name coinciding with the product to an array called wishlist
+                        itemImages: firebase.firestore.FieldValue.arrayUnion(btn.id), // Add the image coinciding with the product to an array called itemImages
+                        links: firebase.firestore.FieldValue.arrayUnion(btn.alt) // Add the link coinciding with the product to an array called links
                 })
             });
-            function redirect(){
+            function redirect(){ // On clicking the image, the window is automatically redirected to the source of the item
                 window.location = link;
             }
         });

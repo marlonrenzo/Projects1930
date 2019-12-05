@@ -51,12 +51,12 @@ function importSidebar() {
     sidebarLink.outerHTML = sidebarHtml;
 }
 
-function goToCategory(category) {
+function goToCategory(category) { // Goes to the product listing page, signalling intent to query a certain category
     sessionStorage.setItem("category", category);
     window.location.href = "productListing.html";
 }
 
-function collapsing() {
+function collapsing() { // Check the display attribute of the object with the id "sidebar", if it's currently none, change it to display block else, keep the sidebar hidden(also not taking up space on the webpage)
     let sidemenu = document.getElementById('sidebar');
     if (sidemenu.style.display === 'none') {
         sidemenu.style.display = 'block';
