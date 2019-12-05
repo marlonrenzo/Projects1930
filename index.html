@@ -69,13 +69,10 @@
                             document.getElementById('login').innerHTML = 'Logout'; // once logged in, change text to logout
                             document.getElementById('login').href = 'index.html';
                             localStorage.setItem("userID",user.uid); // Set cache to current user
+                            localStorage.setItem("userName", user.displayName);
                             let currentUser = firebase.auth().currentUser.displayName;
                             db.collection('Users').doc(currentUser).get().then((docSnapshot)=> { 
-                                if (docSnapshot.exists) { // If the user's profile exists, grab it
-                                    db.collection('Users').doc(currentUser).onSnapshot((doc) => {
-
-                                    });
-                                } else{ // If the user's profile doesn't exist, make it
+                                if (!docSnapshot.exists) { // If the user's profile exists, grab it
                                     createUserProfile(currentUser); 
                                 }
                             })
