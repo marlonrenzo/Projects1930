@@ -4,15 +4,15 @@
     text-align: center;
 }
 .retailerbuttons{
-    margin-top: 50px;
     width: 100%;
     text-align: center;
 }
 
 button.retailer{
+    margin-top:10%;
     border: 2px solid #5748FF;
     border-radius: 10px;
-    width:12%;
+    width:20%;
 }
 
 button.retailer:hover{
@@ -28,7 +28,7 @@ button.retailer:hover{
     margin: auto;
     margin-top:10%;
     width: 85%;
-    height: 740px;
+    height: 90%;
     background-color: white
 }
 #map{
